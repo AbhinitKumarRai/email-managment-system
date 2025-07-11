@@ -1,0 +1,8 @@
+  services:
+    
+    email-warmup-service:
+      build: ./email-warmup-service
+      environment:
+        PORT: 8080
+      ports:
+        - "8080:8080"
