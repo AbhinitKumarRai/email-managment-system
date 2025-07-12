@@ -24,7 +24,7 @@
         KAFKA_BROKERS: kafka:9092
         KAFKA_TOPIC: email-events
         GMAIL_SMTP_USERNAME: abhinitrai1998@gmail.com
-        GMAIL_SMTP_APP_PASSWORD: "yesj ahjd ouzl cmin"
+        GMAIL_SMTP_APP_PASSWORD: ""
         CHOOSEN_SMTP_CLIENT_TYPE: GOOGLE
       ports:
         - "8080:8080"
