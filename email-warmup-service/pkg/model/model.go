@@ -3,9 +3,8 @@ package model
 import "time"
 
 type EmailMessage struct {
-	ID        string    `json:"id"`
+	ID        int64     `json:"id"`
 	From      string    `json:"from"`
-	To        []string  `json:"to"`
 	Subject   string    `json:"subject"`
 	Body      string    `json:"body"`
 	Timestamp time.Time `json:"timestamp"`

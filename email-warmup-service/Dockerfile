@@ -6,5 +6,5 @@ RUN cd cmd && go build -o /email-warmup-service
 
 FROM alpine:latest
 COPY --from=builder /email-warmup-service /email-warmup-service
-EXPOSE 8082
+EXPOSE 8080
 CMD ["/email-warmup-service"]

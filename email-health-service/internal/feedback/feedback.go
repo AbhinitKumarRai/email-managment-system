@@ -1,16 +1,16 @@
 package feedback
 
+import "github.com/AbhinitKumarRai/email-health-service/pkg/model"
+
+type DomainType int
+
+const (
+	Google DomainType = iota
+	Yahoo
+)
+
 type FeedbackLoop interface {
-	Check(emailID int64, recipient string) (delivered bool, spam bool, feedbacks int, err error)
-}
-
-var registry = make(map[string]FeedbackLoop)
-
-func Register(domain string, loop FeedbackLoop) {
-	registry[domain] = loop
-}
-
-func Get(domain string) (FeedbackLoop, bool) {
-	loop, ok := registry[domain]
-	return loop, ok
+	RegisterMailID(emailID string)
+	GetAllStats() map[string]*model.EmailHealthStatus
+	GetStats(mailId string) *model.EmailHealthStatus
 }
