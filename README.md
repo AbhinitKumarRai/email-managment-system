@@ -39,11 +39,10 @@ graph TD
     A --> D[Email Sender]
     D --> E[Custom SMTP Client]
     D --> F[Kafka Producer]
-    B -->|User Events| D
     C -->|Email Events| D
   end
   subgraph Kafka
-    F --> G[email-events/emailId-events Topics]
+    F --> G[email-events/ Topics]
     H[Kafka Consumer] --> I[Health Service]
   end
   subgraph Health Service
